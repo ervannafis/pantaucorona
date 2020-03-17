@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto';
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+hr{
+    border-width: 1px;
+}
+
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+  	position: fixed;
+    width: 100%;
+    animation: smoothScroll 0.3s forwards;
+}
+
+.card {
+  opacity: 0;
+  animation-duration: 3s;
+}
+
