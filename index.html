@@ -70,6 +70,14 @@
 					<p id="perawatan">Jumlah Perawatan</p>
                 </div>
             </div>
+		<div class="flex flex-col card animated fadeInUp
+            bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
+                <div class="px-6 py-4">
+                    <img src="images/menherameninggal.png" alt="" class="w-20 float-right">
+                    <p class="font-bold text-xl">Rasio Kematian</p>
+                    <p id="rasiomati">Rasio Kematian</p>
+                </div>
+            </div>
     	</div>
     	
     	
@@ -123,6 +131,7 @@
                 $('#meninggal').text(`${data[index].attributes.Deaths}`);
                 $('#sembuh').text(`${data[index].attributes.Recovered}`);
                 $('#perawatan').text(`${data[index].attributes.Active}`);
+		    $('#rasiomati').text((`${data[index].attributes.Deaths}`)/(`${data[index].attributes.Confirmed}`)*100);
 
                 for (var i = 0; i <= data.length - 1; i++) {
                     list += `<tr>
