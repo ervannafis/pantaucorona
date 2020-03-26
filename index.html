@@ -21,131 +21,167 @@
         </div>
         <div class="block lg:hidden">
             <button
-                class="flex items-center px-3 py-2 border rounded text-gray-400 border-teal-400 hover:text-gray-500 hover:border-white burger">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
-            </button>
-        </div>
-        <div class="w-full menu hidden sm:hidden lg:block md:block flex-grow lg:flex lg:items-center lg:w-auto">
-            <div class="text-sm lg:flex-grow"></div>
-        </div>
-    </nav>
-    <div class="flex flex-col h-auto w-full text-center bg-pink-100">
-        <div class="px-2 py-5">
-            <h1 class="text-3xl">Pantau Jumlah Kasus Penyebaran COVID-19 Di Indonesia</h1>
-        </div>
-        <div class="flex flex-wrap pb-5 justify-center text-left">
-    		<div class="flex flex-col card animated fadeInUp
-    		bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
-                <div class="px-6 py-4">
-              		<img src="images/menherapositif.png" alt="" class="w-20 float-right">
-                	<p class="font-bold text-xl">Positif</p>
-					<p id="positif">Jumlah Positif</p>
-                </div>
-            </div>
-
-    		<div class="flex flex-col card animated fadeInUp
-    		bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
-                <div class="px-6 py-4">
-              		<img src="images/menherameninggal.png" alt="" class="w-20 float-right">
-                	<p class="font-bold text-xl">Meninggal</p>
-					<p id="meninggal">Jumlah Meninggal</p>
-                </div>
-            </div>
-            <div class="flex flex-col card animated fadeInUp
-    		bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
-                <div class="px-6 py-4">
-              		<img src="images/menherasembuh.png" alt="" class="w-20 float-right">
-                	<p class="font-bold text-xl">Sembuh</p>
-					<p id="sembuh">Jumlah Sembuh</p>
-                </div>
-            </div>
-            <div class="flex flex-col card animated fadeInUp
-    		bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
-                <div class="px-6 py-4">
-              		<img src="images/menheraperawatan.png" alt="" class="w-16 float-right">
-                	<p class="font-bold text-xl">Dalam Perawatan</p>
-					<p id="perawatan">Jumlah Perawatan</p>
-                </div>
-            </div>
-		<div class="flex flex-col card animated fadeInUp
-            bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
-                <div class="px-6 py-4">
-                    <img src="images/menherameninggal.png" alt="" class="w-20 float-right">
-                    <p class="font-bold text-xl">Rasio Kematian</p>
-                    <p id="rasiomati">Rasio Kematian</p>
-                </div>
-            </div>
-    	</div>
-    	
-    	
+            class="flex items-center px-3 py-2 border rounded text-gray-400 border-teal-400 hover:text-gray-500 hover:border-white burger">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+        </button>
     </div>
-    <div class="flex h-auto w-full justify-center pt-10">
-        <div class="px-5">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="px-2 py-2">Negara</td>
+    <div class="w-full menu hidden sm:hidden lg:block md:block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow"></div>
+    </div>
+    <div class="w-full menu hidden sm:hidden lg:block md:block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow"></div>
+        <div>
+            <ul class="flex">
+                <li class="mr-4">
+                    <a href="index.html"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-gray-600 mr-4">
+                    Indonesia
+                </a>
+            </li>
+            <li class="mr-4">
+                <a href="global.html"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-gray-600 mr-4">
+                Global
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+</nav>
+<div class="flex flex-col h-auto w-full text-center bg-pink-100">
+    <div class="px-2 py-5">
+        <h1 class="text-3xl">Pantau Jumlah Kasus Penyebaran COVID-19 Di Indonesia</h1>
+    </div>
+    <div class="flex flex-wrap pb-5 justify-center text-left">
+        <div class="flex flex-col card animated fadeInUp
+        bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
+        <div class="px-6 py-4">
+            <img src="images/menherapositif.png" alt="" class="w-20 float-right">
+            <p class="font-bold text-xl">Positif</p>
+            <p id="positif">Jumlah Positif</p>
+        </div>
+    </div>
+
+    <div class="flex flex-col card animated fadeInUp
+    bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
+    <div class="px-6 py-4">
+        <img src="images/menherameninggal.png" alt="" class="w-20 float-right">
+        <p class="font-bold text-xl">Meninggal</p>
+        <p id="meninggal">Jumlah Meninggal</p>
+    </div>
+</div>
+<div class="flex flex-col card animated fadeInUp
+bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
+<div class="px-6 py-4">
+    <img src="images/menherasembuh.png" alt="" class="w-20 float-right">
+    <p class="font-bold text-xl">Sembuh</p>
+    <p id="sembuh">Jumlah Sembuh</p>
+</div>
+</div>
+<div class="flex flex-col card animated fadeInUp
+bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
+<div class="px-6 py-4">
+    <img src="images/menherameninggal.png" alt="" class="w-20 float-right">
+    <p class="font-bold text-xl">Rasio Kematian</p>
+    <p id="rasiomati">Rasio Kematian</p>
+</div>
+</div>
+</div>
+
+
+</div>
+<div class="flex h-auto w-full justify-center pt-10">
+    <div class="px-5">
+        <table>
+            <thead>
+                <tr>
+                    <th class="px-2 py-2">Provinsi</td>
                         <th class="px-2 py-2">Positif</td>
-                        <th class="px-2 py-2">Meninggal</td>
-                        <th class="px-2 py-2">Sembuh</td>
-                    </tr>
-                </thead>
-                <tbody>
-        
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <footer class="w-full md:grid grid-cols-2 lg:grid grid-cols-2 mt-10 shadow-sm border-t" align="center">
-        <div class="col-span-2 py-2">
-            <p class="mt-5 px-10 mb-1 text-xs text-gray-700">© 2020 ervannafis</p>
-        </div>
-    </footer>
+                            <th class="px-2 py-2">Meninggal</td>
+                                <th class="px-2 py-2">Sembuh</td>  
+                                </tr>
+                            </thead>
+                            <tbody>
 
-    <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(window).scrollTop() > 100) {
-                    $('nav').addClass('navbar-fixed');
-                } else if ($(window).scrollTop() < 101) {
-                    $('nav').removeClass('navbar-fixed');
-                }
-            });
-            getData();
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <footer class="w-full md:grid grid-cols-2 lg:grid grid-cols-2 mt-10 shadow-sm border-t" align="center">
+                    <div class="col-span-2 py-2">
+                        <p class="mt-5 px-10 mb-1 text-xs text-gray-700">© 2020 ervannafis</p>
+                    </div>
+                </footer>
 
-            function getData() {
-                $.getJSON('https://api.kawalcorona.com/', function (data) {
-                    inject(data);
-                });
-            }
+                <script>
+                    $(document).ready(function () {
+                        $(window).scroll(function () {
+                            if ($(window).scrollTop() > 100) {
+                                $('nav').addClass('navbar-fixed');
+                            } else if ($(window).scrollTop() < 101) {
+                                $('nav').removeClass('navbar-fixed');
+                            }
+                        });
+                        getData();
 
-            function inject(data) {
-                var body = $('tbody');
-                var list;
-                var index = data.findIndex(data => data.attributes.Country_Region == "Indonesia");
+                        function getData() {
+                            $.getJSON('https://api.kawalcorona.com/', function (data) {
+                                inject(data);
+                            });
+                        }
 
-                $('#positif').text(`${data[index].attributes.Confirmed}`);
-                $('#meninggal').text(`${data[index].attributes.Deaths}`);
-                $('#sembuh').text(`${data[index].attributes.Recovered}`);
-                $('#perawatan').text(`${data[index].attributes.Active}`);
-		    $('#rasiomati').text((`${data[index].attributes.Deaths}`)/(`${data[index].attributes.Confirmed}`)*100);
+                        function inject(data) {
+                            var body = $('tbody');
+                            var list;
+                            var index = data.findIndex(data => data.attributes.Country_Region == "Indonesia");
 
-                for (var i = 0; i <= data.length - 1; i++) {
-                    list += `<tr>
-                    <td class="border px-2 py-2">${data[i].attributes.Country_Region}</td>
-                    <td class="border px-2 py-2">${data[i].attributes.Confirmed}</td>
-                    <td class="border px-2 py-2">${data[i].attributes.Deaths}</td>
-                    <td class="border px-2 py-2">${data[i].attributes.Recovered}</td>
-                    <tr>`;
-                }
+                            $('#positif').text(`${data[index].attributes.Confirmed}`);
+                            $('#meninggal').text(`${data[index].attributes.Deaths}`);
+                            $('#sembuh').text(`${data[index].attributes.Recovered}`);
+                            $('#rasiomati').text((`${data[index].attributes.Deaths}`)/(`${data[index].attributes.Confirmed}`)*100);
 
-                body.append(list);
-            }
-        });
-    </script>
-</body>
+                            body.append(list);
+                        }
+                    });
+                </script>
 
-</html>
+                <script>
+                    $(document).ready(function () {
+                        $(window).scroll(function () {
+                            if ($(window).scrollTop() > 100) {
+                                $('nav').addClass('navbar-fixed');
+                            } else if ($(window).scrollTop() < 101) {
+                                $('nav').removeClass('navbar-fixed');
+                            }
+                        });
+                        getData();
+
+                        function getData() {
+                            $.getJSON('https://api.kawalcorona.com/indonesia/provinsi/', function (data) {
+                                inject(data);
+                            });
+                        }
+
+                        function inject(data) {
+                            var body = $('tbody');
+                            var list;
+
+                            for (var i = 0; i <= data.length - 1; i++) {
+                                list += `<tr>
+                                <td class="border px-2 py-2">${data[i].attributes.Provinsi}</td>
+                                <td class="border px-2 py-2">${data[i].attributes.Kasus_Posi}</td>
+                                <td class="border px-2 py-2">${data[i].attributes.Kasus_Meni}</td>
+                                <td class="border px-2 py-2">${data[i].attributes.Kasus_Semb}</td>
+                                <tr>`;
+                            }
+
+                            body.append(list);
+                        }
+                    });
+                </script>
+            </body>
+
+            </html>
