@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="stylesheet" href="style/optional.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="scripts/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Pantau Corona</title>
+</head>
+
+<body bgcolor="#F0FFFF">
+    <nav class="flex items-center justify-between flex-wrap bg-white p-6 shadow-md">
+        <div class="flex items-center flex-shrink-0 text-gray-500 mr-6">
+            <img src="images/kaitokid.png" alt="" width="24">
+            <a href="index.html" class="font-semibold ml-2 text-black tracking-wider">Pizcoquee Inc.</a>
+        </div>
+        <div class="block lg:hidden">
+            <button
+            class="flex items-center px-3 py-2 border rounded text-gray-400 border-teal-400 hover:text-gray-500 hover:border-white burger">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+        </button>
+    </div>
+    <div class="w-full menu hidden sm:hidden lg:block md:block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow"></div>
+    </div>
+    <div class="w-full menu hidden sm:hidden lg:block md:block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow"></div>
+        <div>
+            <ul class="flex">
+                <li class="mr-4">
+                    <a href="index.html"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-gray-600 mr-4">
+                    Indonesia
+                </a>
+            </li>
+            <li class="mr-4">
+                <a href="global.html"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-gray-600 mr-4">
+                Global
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+</nav>
+<div class="flex flex-col h-auto w-full text-center bg-pink-100">
+    <div class="px-2 py-5">
+        <h1 class="text-3xl">Pantau Jumlah Kasus Penyebaran COVID-19 Secara Global</h1>
+    </div>
+    <div class="flex flex-wrap pb-5 justify-center text-left">
+      <div class="flex flex-col card animated fadeInUp
+      bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
+      <div class="px-6 py-4">
+        <img src="images/menherapositif.png" alt="" class="w-20 float-right">
+        <p class="font-bold text-xl">Positif</p>
+        <p id="positif">Jumlah Positif</p>
+    </div>
+</div>
+
+<div class="flex flex-col card animated fadeInUp
+bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
+<div class="px-6 py-4">
+    <img src="images/menherameninggal.png" alt="" class="w-20 float-right">
+    <p class="font-bold text-xl">Meninggal</p>
+    <p id="meninggal">Jumlah Meninggal</p>
+</div>
+</div>
+<div class="flex flex-col card animated fadeInUp
+bg-white ml-3 mt-10 max-w-sm w-64 rounded-md shadow-md border border-1">
+<div class="px-6 py-4">
+    <img src="images/menherasembuh.png" alt="" class="w-20 float-right">
+    <p class="font-bold text-xl">Sembuh</p>
+    <p id="sembuh">Jumlah Sembuh</p>
+</div>
+</div>
+</div>
+
+
+</div>
+<div class="flex h-auto w-full justify-center pt-10">
+    <div class="px-5">
+        <table>
+            <thead>
+                <tr>
+                    <th class="px-2 py-2">Negara</td>
+                        <th class="px-2 py-2">Positif</td>
+                            <th class="px-2 py-2">Meninggal</td>
+                                <th class="px-2 py-2">Sembuh</td>  
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <footer class="w-full md:grid grid-cols-2 lg:grid grid-cols-2 mt-10 shadow-sm border-t" align="center">
+                    <div class="col-span-2 py-2">
+                        <p class="mt-5 px-10 mb-1 text-xs text-gray-700">© 2020 ervannafis</p>
+                    </div>
+                </footer>
+
+                <script>
+                    $(document).ready(function () {
+                        $(window).scroll(function () {
+                            if ($(window).scrollTop() > 100) {
+                                $('nav').addClass('navbar-fixed');
+                            } else if ($(window).scrollTop() < 101) {
+                                $('nav').removeClass('navbar-fixed');
+                            }
+                        });
+                        getData();
+
+                        function getData() {
+                            $.getJSON('https://api.kawalcorona.com/positif/', function (data) {
+                                inject(data);
+                            });
+                        }
+
+                        function inject(data) {
+                            var body = $('tbody');
+                            var list;
+
+                            $('#positif').text(`${data.value}`);
+                            body.append(list);
+                        }
+                    });
+                </script>
+
+                <script>
+                    $(document).ready(function () {
+                        $(window).scroll(function () {
+                            if ($(window).scrollTop() > 100) {
+                                $('nav').addClass('navbar-fixed');
+                            } else if ($(window).scrollTop() < 101) {
+                                $('nav').removeClass('navbar-fixed');
+                            }
+                        });
+                        getData();
+
+                        function getData() {
+                            $.getJSON('https://api.kawalcorona.com/meninggal/', function (data) {
+                                inject(data);
+                            });
+                        }
+
+                        function inject(data) {
+                            var body = $('tbody');
+                            var list;
+
+                            $('#meninggal').text(`${data.value}`);
+                            body.append(list);
+                        }
+                    });
+                </script>
+
+                <script>
+                    $(document).ready(function () {
+                        $(window).scroll(function () {
+                            if ($(window).scrollTop() > 100) {
+                                $('nav').addClass('navbar-fixed');
+                            } else if ($(window).scrollTop() < 101) {
+                                $('nav').removeClass('navbar-fixed');
+                            }
+                        });
+                        getData();
+
+                        function getData() {
+                            $.getJSON('https://api.kawalcorona.com/sembuh/', function (data) {
+                                inject(data);
+                            });
+                        }
+
+                        function inject(data) {
+                            var body = $('tbody');
+                            var list;
+
+                            $('#sembuh').text(`${data.value}`);
+                            body.append(list);
+                        }
+                    });
+                </script>
+
+                <script>
+                    $(document).ready(function () {
+                        $(window).scroll(function () {
+                            if ($(window).scrollTop() > 100) {
+                                $('nav').addClass('navbar-fixed');
+                            } else if ($(window).scrollTop() < 101) {
+                                $('nav').removeClass('navbar-fixed');
+                            }
+                        });
+                        getData();
+
+                        function getData() {
+                            $.getJSON('https://api.kawalcorona.com/', function (data) {
+                                inject(data);
+                            });
+                        }
+
+                        function inject(data) {
+                            var body = $('tbody');
+                            var list;
+
+                            for (var i = 0; i <= data.length - 1; i++) {
+                                list += `<tr>
+                                <td class="border px-2 py-2">${data[i].attributes.Country_Region}</td>
+                                <td class="border px-2 py-2">${data[i].attributes.Confirmed}</td>
+                                <td class="border px-2 py-2">${data[i].attributes.Deaths}</td>
+                                <td class="border px-2 py-2">${data[i].attributes.Recovered}</td>
+                                <tr>`;
+                            }
+
+                            body.append(list);
+                        }
+                    });
+                </script>
+            </body>
+
+            </html>
